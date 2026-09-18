@@ -239,6 +239,7 @@
               <ul class="ticks">
                 <li>Pull request review by several LLMs, with an auto-fix step limited to two rounds</li>
                 <li>CLAUDE.md rules, skills, path-scoped rules and hooks for coding agents</li>
+                <li>One shared setup for Claude Code, Cursor, Codex, Copilot and Gemini CLI</li>
                 <li>Ticket-to-PR automation with Jira, Trello, Sentry and Slack</li>
                 <li>Generated Playwright suites, vision QA and narrated demo videos</li>
               </ul>
@@ -303,7 +304,6 @@
           </div>
 
           <div class="work-list">
-            <!-- 01 -->
             <article class="project reveal" data-tags="agents ai">
               <div class="project-index" aria-hidden="true">01</div>
               <div>
@@ -338,7 +338,6 @@
               </div>
             </article>
 
-            <!-- 02 -->
             <article class="project reveal" data-tags="agents">
               <div class="project-index" aria-hidden="true">02</div>
               <div>
@@ -373,9 +372,46 @@
               </div>
             </article>
 
-            <!-- 03 -->
-            <article class="project reveal" data-tags="agents backend">
+            <article class="project reveal" data-tags="agents">
               <div class="project-index" aria-hidden="true">03</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">Agent tooling</span><span class="sep"></span><span>Design &amp; implementation</span>
+                </p>
+                <h3>One AI setup that works in Claude Code, Cursor, Codex, Copilot and Gemini</h3>
+                <p class="project-outcome">
+                  Our project knowledge lived in Claude Code files, so when someone opened the same repo in Cursor or
+                  Gemini CLI the agent started with no context. I reorganised it so the rules, docs and skills are
+                  written once in a neutral format, and every tool reads the same thing.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      Each tool looks for its own files. Claude Code reads CLAUDE.md, Gemini CLI reads GEMINI.md, and
+                      Cursor, Codex and Copilot read AGENTS.md. Keeping a copy for each one by hand means they drift
+                      apart, and the team ends up tied to one vendor.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>AGENTS.md is the single source. It stays at about 100 lines with the mandatory rules, the real validation commands and pointers to the detailed docs. The backend and frontend folders have their own.</li>
+                      <li>Ten reference docs (architecture, domain, database, API, security, i18n, testing and others) are read on demand. Nine task skills, such as bug fixing, database changes and review, are written in the open Agent Skills format.</li>
+                      <li>A sync script generates the small vendor files from those sources. CLAUDE.md just imports AGENTS.md, the Claude skills are generated copies, and Gemini's settings file points at AGENTS.md.</li>
+                      <li>MCP servers are defined once and the script rewrites the config for each tool. Adding a new agent is one entry in a manifest, and seven tools are covered so far.</li>
+                      <li>A doctor script checks for missing files, broken path references, committed secrets and hand-edited generated files, using a SHA-256 lock file. It runs in GitHub Actions on every pull request. Both scripts are plain Node with no dependencies.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>AGENTS.md</li><li>Agent Skills</li><li>Claude Code</li><li>Cursor</li><li>Codex CLI</li><li>GitHub Copilot</li><li>Gemini CLI</li><li>MCP</li><li>Node.js</li><li>GitHub Actions</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project reveal" data-tags="agents backend">
+              <div class="project-index" aria-hidden="true">04</div>
               <div>
                 <p class="project-meta mono">
                   <span class="kind">Agent harness</span><span class="sep"></span><span>Regulated industry</span>
@@ -407,9 +443,8 @@
               </div>
             </article>
 
-            <!-- 04 -->
             <article class="project reveal" data-tags="agents fullstack">
-              <div class="project-index" aria-hidden="true">04</div>
+              <div class="project-index" aria-hidden="true">05</div>
               <div>
                 <p class="project-meta mono">
                   <span class="kind">AI-first rewrite</span><span class="sep"></span><span>Healthcare, HIPAA scope</span>
@@ -442,9 +477,8 @@
               </div>
             </article>
 
-            <!-- 05 -->
             <article class="project reveal" data-tags="ai backend">
-              <div class="project-index" aria-hidden="true">05</div>
+              <div class="project-index" aria-hidden="true">06</div>
               <div>
                 <p class="project-meta mono">
                   <span class="kind">AI data pipeline</span><span class="sep"></span><span>Backend &amp; platform engineering</span>
@@ -477,9 +511,8 @@
               </div>
             </article>
 
-            <!-- 06 -->
             <article class="project reveal" data-tags="ai fullstack">
-              <div class="project-index" aria-hidden="true">06</div>
+              <div class="project-index" aria-hidden="true">07</div>
               <div>
                 <p class="project-meta mono">
                   <span class="kind">Applied AI</span><span class="sep"></span><span>Full-stack build</span>
@@ -512,9 +545,8 @@
               </div>
             </article>
 
-            <!-- 07 -->
             <article class="project reveal" data-tags="backend">
-              <div class="project-index" aria-hidden="true">07</div>
+              <div class="project-index" aria-hidden="true">08</div>
               <div>
                 <p class="project-meta mono">
                   <span class="kind">Performance engineering</span><span class="sep"></span><span>Live consumer platform</span>
@@ -550,7 +582,7 @@
           <div class="work-grid">
             <!-- COMPACT-PROJECTS-START -->
             <article class="project compact reveal" data-tags="ai">
-              <p class="project-meta mono"><span class="kind">Voice AI</span><span class="sep"></span><span>08</span></p>
+              <p class="project-meta mono"><span class="kind">Voice AI</span><span class="sep"></span><span>09</span></p>
               <h3>Realtime AI voice agents, on the phone and in the browser</h3>
               <p class="project-outcome">
                 I built two voice agents for inbound sales calls. The phone version connects Twilio's audio stream to OpenAI's Realtime API over WebSockets and copes with the caller interrupting. The browser version uses WebRTC, and the server issues a short-lived token so the API key never reaches the browser. During the call the model uses tool calls to collect the caller's name, availability and notes. Afterwards a second model turns the transcript into a lead, which is sent by email and webhook.
@@ -561,7 +593,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="ai">
-              <p class="project-meta mono"><span class="kind">Applied research</span><span class="sep"></span><span>09</span></p>
+              <p class="project-meta mono"><span class="kind">Applied research</span><span class="sep"></span><span>10</span></p>
               <h3>RAG vs fine-tuning on the same questions</h3>
               <p class="project-outcome">
                 I tried both approaches on the same HR policy questions. RAG answered 10 out of 10 correctly with no training. Then I fine-tuned TinyLlama-1.1B with LoRA on a free T4, training only 0.2% of the parameters. The loss went from 1.82 to 0.99, but the answers were still worse than RAG. My takeaway was to use RAG for questions about documents and keep fine-tuning for changing how a model behaves or writes.
@@ -572,7 +604,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="ai backend">
-              <p class="project-meta mono"><span class="kind">LLM evaluation</span><span class="sep"></span><span>10</span></p>
+              <p class="project-meta mono"><span class="kind">LLM evaluation</span><span class="sep"></span><span>11</span></p>
               <h3>WhatsApp support bot in Urdu and English, with a test harness</h3>
               <p class="project-outcome">
                 I wanted to know whether an LLM could handle real customer messages in Urdu, Roman Urdu and English, including voice notes. So I built the bot together with a way to test it. Local and hosted models sit behind one interface, and each is scored on reply language, intent, valid JSON and latency. It also counts made-up figures, promises the bot can't keep and leaked prompt text. The webhook checks Meta's signature, replies quickly and does the slow work in the background. Phone numbers are stored only as a hash.
@@ -583,7 +615,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="ai">
-              <p class="project-meta mono"><span class="kind">Generative media</span><span class="sep"></span><span>11</span></p>
+              <p class="project-meta mono"><span class="kind">Generative media</span><span class="sep"></span><span>12</span></p>
               <h3>Script-to-video pipeline on rented GPUs</h3>
               <p class="project-outcome">
                 This turns a written script into a finished video with narration, a lip-synced avatar, b-roll and captions. I generate the audio first and cut every clip to the measured length of its narration, then check the durations with ffprobe. That keeps long videos in sync. I picked the models by comparing cost, quality and licence terms. The pipeline also runs end to end with placeholder audio and video, so it can be tested without paying for any service.
@@ -594,7 +626,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="fullstack">
-              <p class="project-meta mono"><span class="kind">Offline-first PWA</span><span class="sep"></span><span>12</span></p>
+              <p class="project-meta mono"><span class="kind">Offline-first PWA</span><span class="sep"></span><span>13</span></p>
               <h3>Field-inspection app that works without signal</h3>
               <p class="project-outcome">
                 Inspectors often have no signal on site, so the app works offline and syncs when it can. Data is kept in one local collection per quarter and replicates both ways with CouchDB, with a filter so records don't loop back. A record isn't pushed until its file uploads have finished. Forms are generated from config, so a new inspection type doesn't need a new component. There are about 48 Playwright specs for desktop and mobile, and deploys use OIDC with no stored keys.
@@ -605,7 +637,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="ai fullstack">
-              <p class="project-meta mono"><span class="kind">Knowledge platform</span><span class="sep"></span><span>13</span></p>
+              <p class="project-meta mono"><span class="kind">Knowledge platform</span><span class="sep"></span><span>14</span></p>
               <h3>Knowledge management platform with an AI-built ontology</h3>
               <p class="project-outcome">
                 While an author writes, an LLM classifier pulls out entities, the type of knowledge and relationships. When the asset is submitted, new classes are added to the ontology. Audio and video uploads are transcribed with Whisper and go through the same approval queue. The platform has role-based access with separate governance roles, and everything works in English and Arabic, including RTL. I also worked through a backlog of 38 bugs in batches, with tests passing before each batch was closed.
@@ -616,7 +648,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="fullstack backend">
-              <p class="project-meta mono"><span class="kind">Multi-sided SaaS</span><span class="sep"></span><span>14</span></p>
+              <p class="project-meta mono"><span class="kind">Multi-sided SaaS</span><span class="sep"></span><span>15</span></p>
               <h3>Custom-garment manufacturing platform</h3>
               <p class="project-outcome">
                 A long-running SaaS used by retail stores, manufacturers and vendors for measurements, orders, fabric purchasing, alterations and billing. The backend is NestJS split into domain modules, with scheduled jobs that retry with backoff and realtime updates through Pusher. Staff take measurement photos in the browser, and iPhone HEIC images are converted so they display properly. CI deploys log in to Google Cloud with OIDC, so no service account key is stored, and a health check runs after each deploy.
@@ -627,7 +659,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="fullstack backend">
-              <p class="project-meta mono"><span class="kind">API integration</span><span class="sep"></span><span>15</span></p>
+              <p class="project-meta mono"><span class="kind">API integration</span><span class="sep"></span><span>16</span></p>
               <h3>Partner integration reference app</h3>
               <p class="project-outcome">
                 A reference app that shows a SaaS vendor's partners how to use its APIs. It has two admin panels on one user model, with queries scoped to each tenant. The two API hosts use different authentication, and one of them needs an HMAC-SHA256 checksum of the payload. Account provisioning runs as a queued job with one action class behind it. It was moved there after a double-provisioning bug was traced to a listener that was registered twice. The project aims for 100% line coverage.
@@ -638,7 +670,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="fullstack backend">
-              <p class="project-meta mono"><span class="kind">Marketplace</span><span class="sep"></span><span>16</span></p>
+              <p class="project-meta mono"><span class="kind">Marketplace</span><span class="sep"></span><span>17</span></p>
               <h3>Tutoring marketplace: payments, live classroom and safer deploys</h3>
               <p class="project-outcome">
                 A live tutoring marketplace. I added Stripe Checkout with promo codes, recorded each redemption and built an admin report for it. I moved the in-browser classroom to Zoom's Video SDK because the old setup limited how many classes could run at once, and kept the old classroom as a fallback behind a feature flag. After an old file was uploaded by mistake and removed some handlers from production, I wrote a deploy script that compares each file with the live server and stops if something would be lost.
@@ -649,7 +681,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="backend">
-              <p class="project-meta mono"><span class="kind">Search</span><span class="sep"></span><span>17</span></p>
+              <p class="project-meta mono"><span class="kind">Search</span><span class="sep"></span><span>18</span></p>
               <h3>Faster catalogue search with Elasticsearch</h3>
               <p class="project-outcome">
                 Product search on an automotive parts catalogue was slow because it used SQL LIKE queries across several tables. I moved it to Elasticsearch and wrote the joined data into the index at save time, which brought results under a second. I also added composite indexes on the filter columns and replaced lazy loading with eager loading, which cut the number of queries per request by about ten times.
@@ -660,7 +692,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="fullstack backend">
-              <p class="project-meta mono"><span class="kind">Personal project</span><span class="sep"></span><span>18</span></p>
+              <p class="project-meta mono"><span class="kind">Personal project</span><span class="sep"></span><span>19</span></p>
               <h3>Drone RF monitoring dashboard</h3>
               <p class="project-outcome">
                 A side project. You import drone signal readings and see spectrum and signal decay graphs, and an alarm sounds over WebSockets when a drone gets close. The spectrum is generated from each reading with a fixed seed, so it looks the same on every replay. Sessions use an httpOnly cookie, other users' records return 404, sockets are authenticated before they are accepted, and CSV exports are escaped. It has 103 backend tests, and CI fails if the migrations don't match the models.
@@ -671,7 +703,7 @@
             </article>
 
             <article class="project compact reveal" data-tags="agents">
-              <p class="project-meta mono"><span class="kind">Architecture audit</span><span class="sep"></span><span>19</span></p>
+              <p class="project-meta mono"><span class="kind">Architecture audit</span><span class="sep"></span><span>20</span></p>
               <h3>Review of an AI agent system built by another team</h3>
               <p class="project-outcome">
                 A client was thinking about taking over an autonomous SEO agent built by someone else and asked me to review it. I did a read-only audit of one fixed revision. The system was described as four agents, but in CI it was a single session running one long prompt. Two workflows were scheduled for the same minute and did overlapping work, and some checks reported success without looking at a real output. I recommended taking it over and stabilising it, and gave a plan and a plain assessment of how mature it was.
@@ -823,7 +855,7 @@
             <div class="skill-row reveal">
               <h3>Agentic engineering</h3>
               <ul>
-                <li>Claude Code</li><li>Codex CLI</li><li>Gemini CLI</li><li>CLAUDE.md policy design</li><li>Skills &amp; path-scoped rules</li><li>Pre/Post tool-use hooks</li><li>Sub-agents</li><li>Figma MCP</li><li>Playwright MCP</li>
+                <li>Claude Code</li><li>Cursor</li><li>Codex CLI</li><li>Gemini CLI</li><li>GitHub Copilot</li><li>AGENTS.md</li><li>CLAUDE.md policy design</li><li>Skills &amp; path-scoped rules</li><li>Pre/Post tool-use hooks</li><li>Sub-agents</li><li>Figma MCP</li><li>Playwright MCP</li>
               </ul>
             </div>
             <div class="skill-row reveal">
