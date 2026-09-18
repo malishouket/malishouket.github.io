@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muhammad Ali Shouket — Senior Software &amp; AI Engineer</title>
+    <meta
+      name="description"
+      content="Senior software and AI engineer in Lahore with 7 years of full-stack experience. I work on LLM features, RAG, coding-agent pipelines and backend performance."
+    />
+    <meta name="author" content="Muhammad Ali Shouket" />
+    <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)" />
+
+    <!-- Social sharing card. These absolute URLs must match the live address. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Muhammad Ali Shouket — Senior Software &amp; AI Engineer" />
+    <meta
+      property="og:description"
+      content="Senior software and AI engineer in Lahore. I work on LLM features, RAG, coding-agent pipelines and backend performance."
+    />
+    <meta property="og:url" content="https://malishouket.github.io/" />
+    <meta property="og:image" content="https://malishouket.github.io/assets/img/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://malishouket.github.io/" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script>
+      // Set the theme before first paint to avoid a flash.
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("js");
+        var saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch (e) {}
+        root.dataset.theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Ali Shouket",
+        "jobTitle": "Senior Software & AI Engineer",
+        "email": "mailto:m.ali.shouket@gmail.com",
+        "telephone": "+923327404771",
+        "sameAs": ["https://www.linkedin.com/in/ali-shouket/", "https://github.com/malishouket"],
+        "url": "https://malishouket.github.io/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+        "alumniOf": "University of Management and Technology, Lahore",
+        "knowsAbout": [
+          "Large language models",
+          "Retrieval-augmented generation",
+          "LoRA fine-tuning",
+          "AI agents",
+          "CI/CD",
+          "Python",
+          "FastAPI",
+          "Django",
+          "Laravel",
+          "React",
+          "PostgreSQL"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="Muhammad Ali Shouket, back to top">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-name">Muhammad Ali Shouket</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+          </button>
+          <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================== HERO ============================== -->
+      <section class="hero" id="top">
+        <div class="wrap">
+          <p class="status mono reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to senior AI &amp; software roles
+          </p>
+
+          <h1 class="reveal" style="--d: 0.05s">I build AI as <em>infrastructure</em>,<br class="br-lg" /> not a layer bolted on at the end.</h1>
+
+          <p class="hero-lead reveal" style="--d: 0.1s">
+            I'm <strong>Muhammad Ali Shouket</strong>, a senior software and AI engineer based in Lahore. I've been building web applications for <strong>7 years</strong>. For the last couple of years most of my work has been getting LLMs to do useful work inside real products and delivery pipelines, and I still spend a lot of my time on the backend underneath.
+          </p>
+
+          <div class="hero-cta reveal" style="--d: 0.15s">
+            <a class="btn btn-primary" href="#work">
+              See selected work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <dl class="stats reveal" style="--d: 0.2s">
+            <div class="stat">
+              <dt class="stat-value">7<small>+ yrs</small></dt>
+              <dd class="stat-label">building full-stack products in Python, PHP and TypeScript</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value">500K<small>+</small></dt>
+              <dd class="stat-label">users on a live platform where I fixed the slow queries without taking it down</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value">3<small> LLMs</small></dt>
+              <dd class="stat-label">review each pull request in our pipeline before a person looks at it</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value">0.2<small>%</small></dt>
+              <dd class="stat-label">of the weights trained when I fine-tuned a 1.1B model with LoRA on a free Colab GPU</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============================== ABOUT ============================== -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="about-grid">
+            <p class="section-tag mono reveal">About</p>
+            <div class="about-body reveal">
+              <p>
+                I started as a full-stack developer and I still am one. What has changed is that AI is now part of how I build and ship software, and I've spent the last couple of years working out how to make that reliable.
+              </p>
+              <p>
+                Most of my experience is in Python with Django and FastAPI, PHP with Laravel, and TypeScript with React, Next.js and Vue. I usually work on PostgreSQL or MySQL and deploy on AWS. On the AI side I've fine-tuned small LLMs with LoRA, built RAG pipelines over company documents, and set up CI pipelines where Claude, Codex and Gemini each review a pull request before it reaches the team. I also write the CLAUDE.md rules, skills and hooks that keep coding agents inside a project's architecture.
+              </p>
+              <p>
+                I like to test things before I recommend them. I once ran RAG and fine-tuning against the same set of questions. RAG got all ten right and the fine-tuned model did worse, so RAG is what I used.
+              </p>
+            </div>
+          </div>
+
+          <ul class="principles">
+            <li class="principle reveal">
+              <span class="principle-num mono">01</span>
+              <h3>Rules the agent can't skip</h3>
+              <p>When a rule really matters, I put it in a hook so the agent is blocked from breaking it. I've found that writing it in a document isn't enough.</p>
+            </li>
+            <li class="principle reveal" style="--d: 0.08s">
+              <span class="principle-num mono">02</span>
+              <h3>Test first, then decide</h3>
+              <p>Before I pick an approach I try the options on a small case and compare the results. I did this for RAG and fine-tuning, and for polling and WebSockets.</p>
+            </li>
+            <li class="principle reveal" style="--d: 0.16s">
+              <span class="principle-num mono">03</span>
+              <h3>Check what the AI wrote</h3>
+              <p>Code from an agent goes through lint, tests and a review by a second model. For UI work there is also a recorded demo that someone can watch.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================== EXPERTISE ============================== -->
+      <section class="section" id="expertise">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-tag mono reveal">Expertise</p>
+            <div class="reveal">
+              <h2 class="section-title">What I work on</h2>
+            </div>
+          </div>
+
+          <div class="expertise-grid">
+            <article class="card reveal">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2" />
+                  <circle cx="12" cy="12" r="3.5" />
+                </svg>
+              </div>
+              <h3>Applied AI &amp; LLM systems</h3>
+              <p>I build features on top of LLMs, mostly retrieval over documents, tool calling and voice. I've also fine-tuned small models when the behaviour needed to change.</p>
+              <ul class="ticks">
+                <li>RAG pipelines: chunking, embeddings, vector search, grounded prompts</li>
+                <li>LoRA / QLoRA fine-tuning with Transformers, PEFT and TRL</li>
+                <li>Tool calling, streaming, realtime voice agents, MCP servers</li>
+                <li>Local models with Ollama, hosted models from OpenAI and Anthropic</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" style="--d: 0.08s">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="6" cy="6" r="2.5" />
+                  <circle cx="6" cy="18" r="2.5" />
+                  <circle cx="18" cy="12" r="2.5" />
+                  <path d="M6 8.5v7M8.5 6H12a3.5 3.5 0 0 1 3.5 3.5M8.5 18H12a3.5 3.5 0 0 0 3.5-3.5" />
+                </svg>
+              </div>
+              <h3>Agentic engineering &amp; AI-augmented CI/CD</h3>
+              <p>I set up coding agents so that their output is good enough to merge, including on large, older codebases.</p>
+              <ul class="ticks">
+                <li>Pull request review by several LLMs, with an auto-fix step limited to two rounds</li>
+                <li>CLAUDE.md rules, skills, path-scoped rules and hooks for coding agents</li>
+                <li>Ticket-to-PR automation with Jira, Trello, Sentry and Slack</li>
+                <li>Generated Playwright suites, vision QA and narrated demo videos</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="6" rx="7" ry="3" />
+                  <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+                </svg>
+              </div>
+              <h3>Backend &amp; performance engineering</h3>
+              <p>I design schemas and APIs, and I fix the queries and realtime paths that slow down once real traffic arrives.</p>
+              <ul class="ticks">
+                <li>Query rewrites, composite indexes, zero-downtime migrations</li>
+                <li>Redis data structures and WebSockets instead of polling</li>
+                <li>Elasticsearch with write-time denormalisation</li>
+                <li>Layered services in FastAPI, Django and Laravel</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" style="--d: 0.08s">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="13" rx="2" />
+                  <path d="M8 21h8M12 17v4M8 9l-2 2 2 2M16 9l2 2-2 2" />
+                </svg>
+              </div>
+              <h3>Full-stack product delivery</h3>
+              <p>I can take a product from the data model through to deployment and handover.</p>
+              <ul class="ticks">
+                <li>React, Next.js and Vue 3 front ends, including offline-first PWAs</li>
+                <li>Payments, video, messaging and third-party API integrations</li>
+                <li>Docker, GitHub Actions, Bitbucket Pipelines, keyless OIDC deploys</li>
+                <li>Automated checks for accessibility, RTL layouts and mobile</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== WORK ============================== -->
+      <section class="section" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-tag mono reveal">Selected work</p>
+            <div class="reveal">
+              <h2 class="section-title">Some of the <em>work</em> I've done</h2>
+              <p class="section-intro">
+                Most of this was done for clients, so I describe the companies and products without naming them. The technical details are accurate.
+              </p>
+            </div>
+          </div>
+
+          <div class="filters reveal" role="group" aria-label="Filter projects">
+            <button class="chip-btn" type="button" data-filter="all" aria-pressed="true">All<span class="count"></span></button>
+            <button class="chip-btn" type="button" data-filter="agents" aria-pressed="false">Agentic tooling<span class="count"></span></button>
+            <button class="chip-btn" type="button" data-filter="ai" aria-pressed="false">AI &amp; LLM<span class="count"></span></button>
+            <button class="chip-btn" type="button" data-filter="backend" aria-pressed="false">Backend &amp; performance<span class="count"></span></button>
+            <button class="chip-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-stack<span class="count"></span></button>
+          </div>
+
+          <div class="work-list">
+            <!-- 01 -->
+            <article class="project reveal" data-tags="agents ai">
+              <div class="project-index" aria-hidden="true">01</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">AI-augmented CI/CD</span><span class="sep"></span><span>Architect &amp; lead engineer</span>
+                </p>
+                <h3>Multi-LLM code review &amp; QA pipeline</h3>
+                <p class="project-outcome">
+                  A CI pipeline where Claude, Codex and Gemini each review a pull request. It then tries to fix what they found, runs the Playwright tests and checks the UI, all before anyone on the team opens the PR. A project adds it with about 12 lines of YAML.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      Code review was slowing us down on several client projects. I started with one model as the reviewer, but its results changed from run to run and I didn't trust it enough to block a deploy.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>The three models review at the same time. If any one of them asks for changes, the pipeline treats the PR as needing changes.</li>
+                      <li>The auto-fix step runs at most twice. Each round fixes, lints, commits and sends the code back for review.</li>
+                      <li>A PR uses between 2 and 7 separate agent sessions. Each one gets only the tools it needs, and review sessions are read-only.</li>
+                      <li>A script builds the context for each session. It finds the ticket from the branch name, picks the matching skill files, and adds the project rules and the diff.</li>
+                      <li>Tests are chosen based on the ticket. When they pass, a narrated demo video is posted on the PR.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>Claude Code</li><li>OpenAI Codex</li><li>Gemini</li><li>Python</li><li>Bash</li><li>Playwright</li><li>Docker</li><li>GitHub Actions</li><li>Bitbucket Pipelines</li><li>Jira API</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="project reveal" data-tags="agents">
+              <div class="project-index" aria-hidden="true">02</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">Developer platform</span><span class="sep"></span><span>Design &amp; implementation</span>
+                </p>
+                <h3>Ticket-to-pull-request agent orchestrator</h3>
+                <p class="project-outcome">
+                  When a ticket gets a certain label, this tool creates a separate git worktree and Docker stack for it and starts a Claude Code session. The agent writes a plan, waits for a person to approve it, then implements it, reviews its own work and pushes a branch.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      Running coding agents by hand works for one developer but not for a team. We needed each ticket to move through clear steps, with a person approving the plan before any code is written.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>The ticket's labels hold the state. Hooks in the agent session change the label when a step finishes, and a catch-up query picks up anything missed while the server was down.</li>
+                      <li>During planning the agent can't edit code. Editing is switched on only for the implementation step.</li>
+                      <li>Three sub-agents review the result for coverage, regressions and scope. They get two rounds at most.</li>
+                      <li>It also reads production error alerts from Slack, skips the ones that already have a ticket, and opens a bug with the stack trace attached.</li>
+                      <li>Adapters let it work with Jira or Trello, with GitHub, Bitbucket or Azure DevOps, and with Slack.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>Node.js (ESM)</li><li>Claude Code</li><li>Git worktrees</li><li>Docker Compose</li><li>Webhooks</li><li>Sentry</li><li>Slack</li><li>PM2</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="project reveal" data-tags="agents backend">
+              <div class="project-index" aria-hidden="true">03</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">Agent harness</span><span class="sep"></span><span>Regulated industry</span>
+                </p>
+                <h3>Agent guardrails for an environmental-compliance platform</h3>
+                <p class="project-outcome">
+                  This is a large Laravel application that holds compliance data, and a wrong write can corrupt it. I set up the agent configuration so that the risky actions are blocked by hooks before they run.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      The codebase has more than 130 event listeners, materialised compliance tables and an offline sync layer. An agent that doesn't know this can do damage quickly, and written guidelines alone didn't stop it.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>Hooks block raw writes to the materialised tables, stage changes made outside the service that owns them, and any attempt to commit secrets.</li>
+                      <li>I wrote 21 sub-agent definitions, about 16 domain skills and 14 sets of path-scoped rules that follow the domain model.</li>
+                      <li>CI reads the ticket and its plan, works out which domains are affected from a dependency map, and runs only those Playwright specs.</li>
+                      <li>The recordings from that test run are reused for the demo video, so the tests don't have to run twice.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>Claude Code hooks</li><li>MCP servers</li><li>Laravel 11</li><li>Vue 3</li><li>MySQL</li><li>CouchDB</li><li>GraphQL</li><li>Playwright</li><li>Bitbucket Pipelines</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="project reveal" data-tags="agents fullstack">
+              <div class="project-index" aria-hidden="true">04</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">AI-first rewrite</span><span class="sep"></span><span>Healthcare, HIPAA scope</span>
+                </p>
+                <h3>AI-first rewrite of a healthcare diagnostics platform</h3>
+                <p class="project-outcome">
+                  A legacy PHP application is being rebuilt on modular Laravel, with AI agents doing much of the work. The agents follow a written policy that says what they may and may not do. Designs come in from Figma through its MCP server, so nobody re-types design specs by hand.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      The platform handles patient data, so I couldn't leave decisions to the agent's judgement. Each change needed a risk level, and the high-risk ones had to go to a person.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>The policy file lists allowed and forbidden actions. Changes that touch authentication, patient data or billing are automatically marked as high risk.</li>
+                      <li>Pull requests from agents use a fixed branch pattern and a label, and must include a privacy impact assessment.</li>
+                      <li>Design tokens come from Figma through MCP, and Playwright checks the rendered page against them.</li>
+                      <li>There are about 190 Playwright specs across the two codebases, and each shipped feature gets a narrated demo video.</li>
+                      <li>Some rules came from real incidents. After a staging outage, the policy now requires every schema change to be a migration.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>Claude Code</li><li>Figma MCP</li><li>Laravel 11</li><li>PHP 8.2</li><li>PHPStan</li><li>Playwright</li><li>GitHub Actions</li><li>Docker</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 05 -->
+            <article class="project reveal" data-tags="ai backend">
+              <div class="project-index" aria-hidden="true">05</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">AI data pipeline</span><span class="sep"></span><span>Backend &amp; platform engineering</span>
+                </p>
+                <h3>Invoice automation with measured LLM extraction</h3>
+                <p class="project-outcome">
+                  Supplier invoices arrive in a shared mailbox and end up in the accounting system without anyone retyping them. The pipeline saves the PDF, extracts the fields with an LLM, maps the items and exports them. The same data feeds price comparison reports and a chat assistant that answers questions about it.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      Every supplier lays out invoices differently, and a wrong number from the model becomes a wrong number in the books. So the extraction had to be measured.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">Engineering highlights</h4>
+                    <ul class="ticks">
+                      <li>A prompt change has to score at least 95 on an extraction scorecard. If field accuracy drops by more than 2%, the change can't be merged.</li>
+                      <li>The team keeps 14 architecture decision records and enforces them in review. Routes, controllers and data access are kept separate, and all aggregation is done in SQL.</li>
+                      <li>Old code paths were moved over behind feature flags in three phases.</li>
+                      <li>The scheduler pauses background jobs while an accounting export runs, to free database connections, and resumes them afterwards.</li>
+                      <li>Corrections made by users are stored separately from the dbt marts and applied on top, with an audit log.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li><li>Alembic</li><li>dbt</li><li>Gemini API</li><li>APScheduler</li><li>AWS S3</li><li>React</li><li>TanStack</li><li>AG Grid</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 06 -->
+            <article class="project reveal" data-tags="ai fullstack">
+              <div class="project-index" aria-hidden="true">06</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">Applied AI</span><span class="sep"></span><span>Full-stack build</span>
+                </p>
+                <h3>Workforce AI assistant: RAG, tools and LoRA</h3>
+                <p class="project-outcome">
+                  An HR and IT asset platform with a chat assistant. It answers policy questions from a vector store, looks up assets and leave balances, and can open a support ticket during the conversation.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      People kept asking the same policy and asset questions, and the right answer depended on who was asking. The assistant had to respect user roles as well as find the right text.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>A router sends each message to one of seven handlers, such as document search, role-restricted lookups or the ticket flow.</li>
+                      <li>Permissions are checked inside the tools, so the model never receives data the user isn't allowed to see.</li>
+                      <li>Replies stream token by token over SSE. Chat history is saved, and a half-finished ticket survives a server restart.</li>
+                      <li>It runs on a local Llama 3.2 model through Ollama and can switch to a hosted model with one environment variable.</li>
+                      <li>I trained three LoRA adapters on about 2,850 labelled examples for classification and routing.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>FastAPI</li><li>Next.js</li><li>PostgreSQL</li><li>Qdrant</li><li>Ollama</li><li>OpenAI API</li><li>PEFT / LoRA</li><li>SSE</li><li>Docker Compose</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 07 -->
+            <article class="project reveal" data-tags="backend">
+              <div class="project-index" aria-hidden="true">07</div>
+              <div>
+                <p class="project-meta mono">
+                  <span class="kind">Performance engineering</span><span class="sep"></span><span>Live consumer platform</span>
+                </p>
+                <h3>Stabilising a platform at 500K+ users</h3>
+                <p class="project-outcome">
+                  A live platform with more than 500K users had slow queries, and clients were polling for scores. I fixed both while the system stayed online.
+                </p>
+                <div class="project-body">
+                  <div>
+                    <h4 class="mono">Problem</h4>
+                    <p>
+                      The user base had grown faster than the schema. The busiest queries were doing full scans, and every client was polling for a scoreboard that changes all the time.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mono">What I built</h4>
+                    <ul class="ticks">
+                      <li>Normalised the schemas, added B-tree and composite indexes, and rewrote the slowest queries.</li>
+                      <li>Shipped every change as a zero-downtime migration.</li>
+                      <li>Moved the scoreboard to a Redis sorted set, where each write is O(log N).</li>
+                      <li>Pushed updates over WebSockets, with ping checks that drop dead connections.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="stack" aria-label="Technology">
+                  <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="work-grid">
+            <!-- COMPACT-PROJECTS-START -->
+            <article class="project compact reveal" data-tags="ai">
+              <p class="project-meta mono"><span class="kind">Voice AI</span><span class="sep"></span><span>08</span></p>
+              <h3>Realtime AI voice agents, on the phone and in the browser</h3>
+              <p class="project-outcome">
+                I built two voice agents for inbound sales calls. The phone version connects Twilio's audio stream to OpenAI's Realtime API over WebSockets and copes with the caller interrupting. The browser version uses WebRTC, and the server issues a short-lived token so the API key never reaches the browser. During the call the model uses tool calls to collect the caller's name, availability and notes. Afterwards a second model turns the transcript into a lead, which is sent by email and webhook.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Node.js</li><li>Fastify</li><li>OpenAI Realtime API</li><li>WebRTC</li><li>WebSocket</li><li>Twilio</li><li>Tool calling</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="ai">
+              <p class="project-meta mono"><span class="kind">Applied research</span><span class="sep"></span><span>09</span></p>
+              <h3>RAG vs fine-tuning on the same questions</h3>
+              <p class="project-outcome">
+                I tried both approaches on the same HR policy questions. RAG answered 10 out of 10 correctly with no training. Then I fine-tuned TinyLlama-1.1B with LoRA on a free T4, training only 0.2% of the parameters. The loss went from 1.82 to 0.99, but the answers were still worse than RAG. My takeaway was to use RAG for questions about documents and keep fine-tuning for changing how a model behaves or writes.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>ChromaDB</li><li>sentence-transformers</li><li>LangChain</li><li>Transformers</li><li>PEFT</li><li>TRL</li><li>Colab T4</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="ai backend">
+              <p class="project-meta mono"><span class="kind">LLM evaluation</span><span class="sep"></span><span>10</span></p>
+              <h3>WhatsApp support bot in Urdu and English, with a test harness</h3>
+              <p class="project-outcome">
+                I wanted to know whether an LLM could handle real customer messages in Urdu, Roman Urdu and English, including voice notes. So I built the bot together with a way to test it. Local and hosted models sit behind one interface, and each is scored on reply language, intent, valid JSON and latency. It also counts made-up figures, promises the bot can't keep and leaked prompt text. The webhook checks Meta's signature, replies quickly and does the slow work in the background. Phone numbers are stored only as a hash.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>FastAPI</li><li>Ollama</li><li>Hugging Face</li><li>faster-whisper</li><li>WhatsApp Cloud API</li><li>SQLite</li><li>pytest</li><li>Docker</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="ai">
+              <p class="project-meta mono"><span class="kind">Generative media</span><span class="sep"></span><span>11</span></p>
+              <h3>Script-to-video pipeline on rented GPUs</h3>
+              <p class="project-outcome">
+                This turns a written script into a finished video with narration, a lip-synced avatar, b-roll and captions. I generate the audio first and cut every clip to the measured length of its narration, then check the durations with ffprobe. That keeps long videos in sync. I picked the models by comparing cost, quality and licence terms. The pipeline also runs end to end with placeholder audio and video, so it can be tested without paying for any service.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Python</li><li>FFmpeg</li><li>SadTalker</li><li>PyTorch / CUDA</li><li>ElevenLabs</li><li>RunPod</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="fullstack">
+              <p class="project-meta mono"><span class="kind">Offline-first PWA</span><span class="sep"></span><span>12</span></p>
+              <h3>Field-inspection app that works without signal</h3>
+              <p class="project-outcome">
+                Inspectors often have no signal on site, so the app works offline and syncs when it can. Data is kept in one local collection per quarter and replicates both ways with CouchDB, with a filter so records don't loop back. A record isn't pushed until its file uploads have finished. Forms are generated from config, so a new inspection type doesn't need a new component. There are about 48 Playwright specs for desktop and mobile, and deploys use OIDC with no stored keys.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Vue 3</li><li>TypeScript</li><li>RxDB</li><li>CouchDB</li><li>SQS</li><li>Capacitor</li><li>Workbox</li><li>CloudFormation</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="ai fullstack">
+              <p class="project-meta mono"><span class="kind">Knowledge platform</span><span class="sep"></span><span>13</span></p>
+              <h3>Knowledge management platform with an AI-built ontology</h3>
+              <p class="project-outcome">
+                While an author writes, an LLM classifier pulls out entities, the type of knowledge and relationships. When the asset is submitted, new classes are added to the ontology. Audio and video uploads are transcribed with Whisper and go through the same approval queue. The platform has role-based access with separate governance roles, and everything works in English and Arabic, including RTL. I also worked through a backlog of 38 bugs in batches, with tests passing before each batch was closed.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>React</li><li>FastAPI</li><li>MongoDB</li><li>Claude API</li><li>Whisper</li><li>SSE</li><li>D3 / Three.js</li><li>Playwright</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="fullstack backend">
+              <p class="project-meta mono"><span class="kind">Multi-sided SaaS</span><span class="sep"></span><span>14</span></p>
+              <h3>Custom-garment manufacturing platform</h3>
+              <p class="project-outcome">
+                A long-running SaaS used by retail stores, manufacturers and vendors for measurements, orders, fabric purchasing, alterations and billing. The backend is NestJS split into domain modules, with scheduled jobs that retry with backoff and realtime updates through Pusher. Staff take measurement photos in the browser, and iPhone HEIC images are converted so they display properly. CI deploys log in to Google Cloud with OIDC, so no service account key is stored, and a health check runs after each deploy.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>NestJS</li><li>TypeORM</li><li>MySQL</li><li>Vue</li><li>Auth0</li><li>Stripe</li><li>Pusher</li><li>Google App Engine</li><li>GitHub Actions</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="fullstack backend">
+              <p class="project-meta mono"><span class="kind">API integration</span><span class="sep"></span><span>15</span></p>
+              <h3>Partner integration reference app</h3>
+              <p class="project-outcome">
+                A reference app that shows a SaaS vendor's partners how to use its APIs. It has two admin panels on one user model, with queries scoped to each tenant. The two API hosts use different authentication, and one of them needs an HMAC-SHA256 checksum of the payload. Account provisioning runs as a queued job with one action class behind it. It was moved there after a double-provisioning bug was traced to a listener that was registered twice. The project aims for 100% line coverage.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Laravel</li><li>Filament</li><li>MySQL / MariaDB</li><li>Queues</li><li>PHPUnit</li><li>Docker</li><li>GitHub Actions</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="fullstack backend">
+              <p class="project-meta mono"><span class="kind">Marketplace</span><span class="sep"></span><span>16</span></p>
+              <h3>Tutoring marketplace: payments, live classroom and safer deploys</h3>
+              <p class="project-outcome">
+                A live tutoring marketplace. I added Stripe Checkout with promo codes, recorded each redemption and built an admin report for it. I moved the in-browser classroom to Zoom's Video SDK because the old setup limited how many classes could run at once, and kept the old classroom as a fallback behind a feature flag. After an old file was uploaded by mistake and removed some handlers from production, I wrote a deploy script that compares each file with the live server and stops if something would be lost.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>PHP</li><li>WordPress</li><li>MySQL</li><li>Stripe</li><li>Zoom Video SDK</li><li>Python</li><li>Playwright</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="backend">
+              <p class="project-meta mono"><span class="kind">Search</span><span class="sep"></span><span>17</span></p>
+              <h3>Faster catalogue search with Elasticsearch</h3>
+              <p class="project-outcome">
+                Product search on an automotive parts catalogue was slow because it used SQL LIKE queries across several tables. I moved it to Elasticsearch and wrote the joined data into the index at save time, which brought results under a second. I also added composite indexes on the filter columns and replaced lazy loading with eager loading, which cut the number of queries per request by about ten times.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Laravel</li><li>Elasticsearch</li><li>PostgreSQL</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="fullstack backend">
+              <p class="project-meta mono"><span class="kind">Personal project</span><span class="sep"></span><span>18</span></p>
+              <h3>Drone RF monitoring dashboard</h3>
+              <p class="project-outcome">
+                A side project. You import drone signal readings and see spectrum and signal decay graphs, and an alarm sounds over WebSockets when a drone gets close. The spectrum is generated from each reading with a fixed seed, so it looks the same on every replay. Sessions use an httpOnly cookie, other users' records return 404, sockets are authenticated before they are accepted, and CSV exports are escaped. It has 103 backend tests, and CI fails if the migrations don't match the models.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>FastAPI</li><li>SQLAlchemy async</li><li>MySQL</li><li>React 19</li><li>Plotly</li><li>WebSockets</li><li>GitHub Actions</li>
+              </ul>
+            </article>
+
+            <article class="project compact reveal" data-tags="agents">
+              <p class="project-meta mono"><span class="kind">Architecture audit</span><span class="sep"></span><span>19</span></p>
+              <h3>Review of an AI agent system built by another team</h3>
+              <p class="project-outcome">
+                A client was thinking about taking over an autonomous SEO agent built by someone else and asked me to review it. I did a read-only audit of one fixed revision. The system was described as four agents, but in CI it was a single session running one long prompt. Two workflows were scheduled for the same minute and did overlapping work, and some checks reported success without looking at a real output. I recommended taking it over and stabilising it, and gave a plan and a plain assessment of how mature it was.
+              </p>
+              <ul class="stack" aria-label="Technology">
+                <li>Claude Code Actions</li><li>GitHub Actions</li><li>Next.js</li><li>GA4</li><li>Technical writing</li>
+              </ul>
+            </article>
+            <!-- COMPACT-PROJECTS-END -->
+          </div>
+
+          <p class="nda-note reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="9" rx="2" />
+              <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+            </svg>
+            <span>I've left out client and employer names. In an interview I'm happy to go through the architecture and show code from my non-confidential projects.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================== DEEP DIVE ============================== -->
+      <section class="section" id="deep-dive">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-tag mono reveal">Deep dive</p>
+            <div class="reveal">
+              <h2 class="section-title">How a pull request goes through the pipeline</h2>
+              <p class="section-intro">
+                This is the first project above, drawn as a diagram. Three models review the change separately. If any one of them asks for fixes, the change goes to the auto-fix step and is reviewed again before the tests run.
+              </p>
+            </div>
+          </div>
+
+          <figure class="pipeline reveal" role="img" aria-label="Pipeline diagram: a pull request triggers context assembly, then Claude, Codex and Gemini review in parallel. A synthesis step takes the most conservative verdict. If fixes are needed, an auto-fix loop of at most two rounds sends the change back for re-review. On pass, Playwright QA and vision review run, a narrated demo video is produced, and the pull request goes to a human reviewer.">
+            <svg viewBox="0 30 1120 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path class="arrowhead" d="M0 0 10 5 0 10z" />
+                </marker>
+              </defs>
+
+              <!-- edges -->
+              <path class="edge flow" d="M140 178H178" marker-end="url(#arrow)" />
+              <path class="edge" d="M340 178C365 178 365 78 388 78" marker-end="url(#arrow)" />
+              <path class="edge" d="M340 178H388" marker-end="url(#arrow)" />
+              <path class="edge" d="M340 178C365 178 365 278 388 278" marker-end="url(#arrow)" />
+              <path class="edge" d="M530 78C555 78 555 178 578 178" marker-end="url(#arrow)" />
+              <path class="edge" d="M530 178H578" marker-end="url(#arrow)" />
+              <path class="edge" d="M530 278C555 278 555 178 578 178" marker-end="url(#arrow)" />
+              <path class="edge flow" d="M740 178H788" marker-end="url(#arrow)" />
+              <path class="edge" d="M660 206V298" marker-end="url(#arrow)" />
+              <path class="edge" d="M580 328H260V208" marker-end="url(#arrow)" />
+              <path class="edge flow" d="M940 178H978" marker-end="url(#arrow)" />
+              <path class="edge" d="M865 206V298" marker-end="url(#arrow)" />
+
+              <text class="edge-label" x="764" y="168" text-anchor="middle">PASS</text>
+              <text class="edge-label" x="668" y="256">NEEDS_FIXES</text>
+              <text class="edge-label" x="420" y="346" text-anchor="middle">re-review · max 2 rounds</text>
+
+              <!-- nodes -->
+              <g class="node">
+                <rect x="10" y="150" width="130" height="56" rx="10" />
+                <text x="75" y="175" text-anchor="middle">Pull request</text>
+                <text class="sub" x="75" y="193" text-anchor="middle">opened / updated</text>
+              </g>
+              <g class="node">
+                <rect x="180" y="150" width="160" height="56" rx="10" />
+                <text x="260" y="175" text-anchor="middle">Context assembly</text>
+                <text class="sub" x="260" y="193" text-anchor="middle">ticket · rules · diff</text>
+              </g>
+              <g class="node">
+                <rect x="390" y="50" width="140" height="56" rx="10" />
+                <text x="460" y="75" text-anchor="middle">Claude</text>
+                <text class="sub" x="460" y="93" text-anchor="middle">read-only session</text>
+              </g>
+              <g class="node">
+                <rect x="390" y="150" width="140" height="56" rx="10" />
+                <text x="460" y="175" text-anchor="middle">Codex</text>
+                <text class="sub" x="460" y="193" text-anchor="middle">read-only session</text>
+              </g>
+              <g class="node">
+                <rect x="390" y="250" width="140" height="56" rx="10" />
+                <text x="460" y="275" text-anchor="middle">Gemini</text>
+                <text class="sub" x="460" y="293" text-anchor="middle">read-only session</text>
+              </g>
+              <g class="node accent">
+                <rect x="580" y="150" width="160" height="56" rx="10" />
+                <text x="660" y="175" text-anchor="middle">Verdict synthesis</text>
+                <text class="sub" x="660" y="193" text-anchor="middle">most conservative wins</text>
+              </g>
+              <g class="node">
+                <rect x="580" y="300" width="160" height="56" rx="10" />
+                <text x="660" y="325" text-anchor="middle">Auto-fix loop</text>
+                <text class="sub" x="660" y="343" text-anchor="middle">fix · lint · commit</text>
+              </g>
+              <g class="node">
+                <rect x="790" y="150" width="150" height="56" rx="10" />
+                <text x="865" y="175" text-anchor="middle">Playwright QA</text>
+                <text class="sub" x="865" y="193" text-anchor="middle">+ vision review</text>
+              </g>
+              <g class="node">
+                <rect x="790" y="300" width="150" height="56" rx="10" />
+                <text x="865" y="325" text-anchor="middle">Demo video</text>
+                <text class="sub" x="865" y="343" text-anchor="middle">narrated, on the PR</text>
+              </g>
+              <g class="node accent">
+                <rect x="980" y="150" width="130" height="56" rx="10" />
+                <text x="1045" y="175" text-anchor="middle">Human review</text>
+                <text class="sub" x="1045" y="193" text-anchor="middle">final check</text>
+              </g>
+            </svg>
+          </figure>
+
+          <ul class="pipeline-notes">
+            <li class="reveal">
+              <strong>Every session starts fresh</strong>
+              Each agent session starts with no memory of earlier ones. The context is rebuilt from the ticket, the project's rule files and the diff, so an earlier attempt can't influence a later review.
+            </li>
+            <li class="reveal" style="--d: 0.08s">
+              <strong>Only the tools each step needs</strong>
+              Review sessions can only read files. The fix session can write and edit but can't run shell commands. The visual review is read-only and works from screenshots.
+            </li>
+            <li class="reveal" style="--d: 0.16s">
+              <strong>The fix loop has a limit</strong>
+              Auto-fix runs twice at most. It also stops if there was nothing to commit or the push failed. After that the PR goes to a person.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================== SKILLS ============================== -->
+      <section class="section" id="skills">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-tag mono reveal">Skills</p>
+            <div class="reveal">
+              <h2 class="section-title">Tools and technologies</h2>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skill-row reveal">
+              <h3>AI / ML</h3>
+              <ul>
+                <li>RAG pipelines</li><li>LoRA / QLoRA fine-tuning</li><li>Hugging Face Transformers</li><li>PEFT</li><li>TRL</li><li>LangChain</li><li>Embeddings &amp; vector search</li><li>ChromaDB</li><li>Qdrant</li><li>Pinecone</li><li>Tool calling</li><li>Claude API</li><li>OpenAI API</li><li>OpenAI Realtime API</li><li>Gemini API</li><li>Ollama</li><li>Whisper</li><li>LLM evaluation harnesses</li><li>Multi-LLM orchestration</li><li>MCP servers</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Agentic engineering</h3>
+              <ul>
+                <li>Claude Code</li><li>Codex CLI</li><li>Gemini CLI</li><li>CLAUDE.md policy design</li><li>Skills &amp; path-scoped rules</li><li>Pre/Post tool-use hooks</li><li>Sub-agents</li><li>Figma MCP</li><li>Playwright MCP</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Languages</h3>
+              <ul>
+                <li>Python</li><li>PHP</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>Bash</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Backend</h3>
+              <ul>
+                <li>FastAPI</li><li>Django</li><li>Laravel</li><li>NestJS</li><li>Node.js / Fastify</li><li>Next.js</li><li>REST APIs</li><li>GraphQL</li><li>WebSockets</li><li>SSE</li><li>SQLAlchemy</li><li>Queues &amp; webhooks</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Frontend</h3>
+              <ul>
+                <li>React</li><li>Next.js</li><li>Vue 3</li><li>Tailwind CSS</li><li>SCSS</li><li>PWAs &amp; offline sync</li><li>Accessibility</li><li>RTL / i18n</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Data</h3>
+              <ul>
+                <li>PostgreSQL</li><li>MySQL</li><li>Redis</li><li>Elasticsearch</li><li>MongoDB</li><li>CouchDB</li><li>dbt</li><li>Schema &amp; index design</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Cloud / DevOps</h3>
+              <ul>
+                <li>AWS</li><li>Google Cloud</li><li>Docker</li><li>GitHub Actions</li><li>Bitbucket Pipelines</li><li>OIDC keyless deploys</li><li>CloudFormation</li><li>Self-hosted runners</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>Quality</h3>
+              <ul>
+                <li>Playwright</li><li>pytest</li><li>PHPUnit</li><li>Vitest</li><li>PHPStan</li><li>ESLint / Prettier</li><li>axe-core</li><li>Sentry</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== EXPERIENCE ============================== -->
+      <section class="section" id="experience">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-tag mono reveal">Experience</p>
+            <div class="reveal">
+              <h2 class="section-title">Where I've worked</h2>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <article class="role reveal">
+              <p class="role-when mono">2024 — Present</p>
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <p class="role-where">Software consultancy · Lahore, Pakistan</p>
+                <ul class="ticks">
+                  <li>I lead the team's AI-assisted development work. I designed the multi-LLM review and QA pipeline that now runs on client projects in GitHub Actions and Bitbucket Pipelines.</li>
+                  <li>I set up the agent configuration (rules, skills and hooks) for client platforms in regulated areas, including environmental compliance and healthcare.</li>
+                  <li>I've built RAG assistants, realtime voice agents and LLM classification features for clients and internal tools, and fine-tuned small models with LoRA.</li>
+                  <li>I also work on backend architecture and performance across Python, PHP and TypeScript services.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="role reveal">
+              <p class="role-when mono">2019 — 2024</p>
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="role-where">Technology company · Lahore, Pakistan</p>
+                <ul class="ticks">
+                  <li>Built and maintained full-stack web applications in Laravel, Django and React on MySQL and PostgreSQL.</li>
+                  <li>Designed database schemas, REST APIs and third-party integrations. Tuned slow queries and added search indexing.</li>
+                  <li>Started on feature work and moved on to owning whole modules, from the data model to deployment.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="role reveal">
+              <p class="role-when mono">Education</p>
+              <div>
+                <h3>Bachelor of Computer Science</h3>
+                <p class="role-where">University of Management and Technology (UMT), Lahore</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CONTACT ============================== -->
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <h2 class="reveal">Get in <em>touch</em></h2>
+          <p class="reveal" style="--d: 0.06s">
+            I'm looking for senior software or AI engineering roles, remote or on-site. I also take on consulting work around AI-assisted development and CI pipelines. Email is the quickest way to reach me.
+          </p>
+
+          <div class="email-row reveal" style="--d: 0.12s">
+            <a class="email-link" href="mailto:m.ali.shouket@gmail.com">m.ali.shouket@gmail.com</a>
+            <button class="copy-btn" type="button" data-copy="m.ali.shouket@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2" />
+                <path d="M5 15V6a2 2 0 0 1 2-2h9" />
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <p class="socials reveal" style="--d: 0.18s">
+            <a href="https://github.com/malishouket" target="_blank" rel="noopener me">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/ali-shouket/" target="_blank" rel="noopener me">LinkedIn ↗</a>
+            <a href="tel:+923327404771">+92 332 7404771</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year">2026</span> Muhammad Ali Shouket</span>
+        <span>Lahore, Pakistan</span>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
